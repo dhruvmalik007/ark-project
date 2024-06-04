@@ -16,7 +16,9 @@ export {
   createListing,
   createOffer,
   createCollectionOffer,
+  fulfillCollectionOffer,
   cancelOrder,
+  cancelCollectionOffer,
   fulfillAuction,
   fulfillListing,
   fulfillOffer
