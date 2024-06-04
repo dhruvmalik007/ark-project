@@ -6,3 +6,4 @@ export { cancelOrder } from "./cancel.js";
 export { fulfillListing } from "./fulfillListing.js";
 export { fulfillAuction } from "./fulfillAuction.js";
 export { fulfillOffer } from "./fulfillOffer.js";
+export { fulfillCollectionOffer } from "./fulfillCollectionOffer.js";
