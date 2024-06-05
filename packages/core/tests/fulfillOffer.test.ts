@@ -43,8 +43,6 @@ describe("fulfillOffer", () => {
     const startAmount = 100000000000000000;
     await mintERC20({ account: buyerAccount, amount: startAmount });
 
-    return;
-
     const initialSellerBalance = await getBalance({ account: sellerAccount });
 
     const offer: OfferV1 = {
@@ -83,8 +81,8 @@ describe("fulfillOffer", () => {
       orderHash
     });
     const sellerBalance = await getBalance({ account: sellerAccount });
-    const fees = (BigInt(offer.startAmount) * BigInt(1)) / BigInt(100);
-    const amount = BigInt(offer.startAmount) - fees;
+    const fees = (offer.startAmount * BigInt(1)) / BigInt(100);
+    const amount = offer.startAmount - fees;
 
     expect(orderStatusFulfilled).toBe("Executed");
     expect(sellerBalance).toEqual(initialSellerBalance + amount);
